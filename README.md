@@ -27,7 +27,7 @@
   - [📊 Commercial SaaS Comparison Matrix](#-commercial-saas-comparison-matrix)
   - [🔍 SaaS Platform Deep Dives](#-saas-platform-deep-dives)
 - [🟩 Open-Source Software](#-open-source-software)
-  - [⭐ Open-Source Solutions by Star Count](#-open-source-solutions-by-star-count)
+  - [⭐ Open-Source Solutions by Stars_Count](#-open-source-solutions-by-star-count)
   - [🔬 Open-Source Project Deep Dives](#-open-source-project-deep-dives)
 - [⚖️ Comparison at a Glance](#-comparison-at-a-glance)
 - [📈 Star History](#-star-history)
@@ -118,9 +118,9 @@ Commercial, cloud-hosted Secure Hosted Payment Page platforms sorted in descendi
 
 Self-hosted, community-driven payment orchestration platforms, self-hosted checkout engines, and crypto payment processors. These solutions provide self-hosted alternatives for managing checkout flows, payment routing, and multi-gateway connectivity while keeping sensitive cardholder data isolated or delegating to compliant tokenization vaults.
 
-### ⭐ Open-Source Solutions by Star Count
+### ⭐ Open-Source Solutions by Stars_Count
 
-| Project | Stars | Language / Stack | License | Primary Focus |
+| Project | GitHub_Stars | Language / Stack | License | Primary Focus |
 | :--- | :---: | :--- | :--- | :--- |
 | **[juspay/hyperswitch](https://github.com/juspay/hyperswitch)** | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | Rust | Apache-2.0 | High-performance open-source payment switch & PCI-compliant hosted checkout |
 | **[medusajs/medusa](https://github.com/medusajs/medusa)** | [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | TypeScript / Node.js | Medusa License | Headless commerce engine with modular hosted & embedded checkout flows |
@@ -234,7 +234,7 @@ Contributions are warmly welcomed! If you maintain or use an open-source payment
 
 1. Fork this repository.
 2. Add your entry under the appropriate section following star-count or valuation sorting guidelines.
-3. Include the project's repository URL, tech stack, license, live star badge, and primary value proposition.
+3. Include the project's repository URL, tech stack, license, live Stars_Badge, and primary value proposition.
 4. Submit a Pull Request with a descriptive summary of why the tool is valuable.
 
 Please ensure that open-source submissions are actively maintained (commits or releases within the past 12 months) and carry an established open-source license.
