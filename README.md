@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Secure Hosted Payment Pages &amp; Checkout Solutions" width="100%">
+</p>
+
 # 💳 Awesome Secure Hosted Payment Pages (PCI-DSS)
 
 <p align="center">
@@ -63,47 +67,47 @@ Commercial, cloud-hosted Secure Hosted Payment Page platforms sorted in descendi
 
 ### 🔍 SaaS Platform Deep Dives
 
-#### Chargebee Hosted Pages
+#### 💳 Chargebee Hosted Pages
 - **Type:** Full-featured billing hosted pages with PCI DSS Level 1
 - **Overview:** Chargebee's hosted capabilities provide pre-built, configurable pages for checkout, customer portal, payment method management, and pay-now invoice collection. For card payments, they help meet most PCI DSS compliance requirements with Level 1 compliance. Pages can be embedded via `Chargebee.js` (which creates and manages the secure iframe) rather than placing raw URLs in manual iframes. Supported features include multiple payment gateways, localization, brand customization, automated tax calculation, and subscription management offloading.
 - **Best for:** Subscription and SaaS businesses already using Chargebee for billing wanting hosted checkout and portal pages that offload PCI scope alongside subscription management.
 
-#### Stripe Hosted Checkout
+#### 💳 Stripe Hosted Checkout
 - **Type:** Hosted payment pages with intelligent recovery and compliance tooling
 - **Overview:** Stripe Checkout Sessions provide turnkey hosted payment pages for one-time payments and recurring subscriptions. Stripe automatically adapts to customer device, language, and currency, supporting over 100 payment methods. Revenue recovery features include Smart Retries (recovering 57% of failed recurring payments on average), automated reminder emails, and a hosted customer portal for updating payment details.
 - **Best for:** Development teams wanting a battle-tested, globally localized hosted checkout experience with built-in fraud prevention (Radar) and zero server PCI scope.
 
-#### PayPal Hosted Checkout
+#### 💳 PayPal Hosted Checkout
 - **Type:** Hosted checkout with comprehensive consumer payment method coverage
 - **Overview:** PayPal's hosted checkout accepts PayPal, Venmo, Pay Later, cryptocurrency, and major credit/debit cards across 200+ markets and 130+ currencies. PayPal manages all PCI compliance for the hosted flow, backed by built-in risk algorithms and Seller Protection on eligible transactions.
 - **Best for:** Businesses seeking high consumer trust and conversion through broad wallet coverage (PayPal, Venmo) without monthly software subscription overhead.
 
-#### Adyen Hosted Checkout
+#### 💳 Adyen Hosted Checkout
 - **Type:** Highly customizable enterprise hosted checkout with theme architecture
 - **Overview:** Adyen Hosted Checkout supports theme creation with custom brand logos, typography, and color schemes, where the theme ID is passed dynamically in the session initiation request. The session response returns a time-bound hosted payment page URL. Adyen supports hundreds of local and international payment methods with advanced risk scoring (RevenueProtect) and automated tokenization.
 - **Best for:** Global omnichannel enterprises and merchants wanting brand-aligned, themeable hosted checkout pages with direct bank acquiring.
 
-#### Square Hosted Checkout
+#### 💳 Square Hosted Checkout
 - **Type:** Hosted payment links for forms, invoices, and e-commerce
 - **Overview:** Square Hosted Checkout enables merchants to generate instant payment links and checkout URLs without maintaining a standalone web storefront. Buyers are redirected to a Square-hosted page to complete payment and then returned to the merchant site. Features include pre-populated buyer contact details, automatic payment reminders for unpaid invoices, and real-time synchronization with the Square Customer Directory.
 - **Best for:** Omnichannel businesses and SMBs needing straightforward hosted checkout links for forms, social selling, and service billing.
 
-#### FastSpring Storefront
+#### 💳 FastSpring Storefront
 - **Type:** Merchant of Record storefront with hosted checkout & tax remittance
 - **Overview:** FastSpring acts as an authorized Merchant of Record (MoR), absorbing total liability for payment processing, chargebacks, fraud, and global sales tax / VAT / GST collection and filing. The hosted storefront handles localized checkouts, digital fulfillment, recurring billing, and self-service buyer portals.
 - **Best for:** Global software, SaaS, and digital goods publishers seeking complete relief from international tax regulations and chargeback liabilities.
 
-#### Mollie Payment Links
+#### 💳 Mollie Payment Links
 - **Type:** European-centric hosted payment links with QR code integration
 - **Overview:** Mollie Payment Links generate secure URLs and QR codes directing customers to a branded checkout page. Links can be created through the Mollie Web App, mobile dashboard, or programmatically via the Payment Links API, with support for custom expiry dates and webhook notifications. Mollie handles all cardholder data within its secure infrastructure.
 - **Best for:** European merchants and service businesses desiring frictionless, shareable payment links with rich support for regional payment methods (iDEAL, Bancontact, SEPA).
 
-#### Checkout.com Hosted Payments
+#### 💳 Checkout.com Hosted Payments
 - **Type:** Enterprise hosted payment pages and shareable payment links
 - **Overview:** Checkout.com provides Hosted Payments Pages where customers enter payment information on Checkout.com-hosted secure domains. Payment tokens are securely created in the background to finalize transactions, reducing merchant infrastructure to SAQ A PCI compliance. Payment Links can be dispatched across SMS, messaging apps, and email.
 - **Best for:** High-volume digital platforms, marketplaces, and cross-border merchants wanting enterprise-grade payment performance and granular routing.
 
-#### Authorize.Net SIM Hosted Form
+#### 💳 Authorize.Net SIM Hosted Form
 - **Type:** Established hosted payment form with customizable template controls
 - **Overview:** Authorize.Net's Server Integration Method (SIM) and modern hosted payment forms provide customizable checkout forms where card data is captured directly on Visa/Authorize.Net servers. Merchants can configure color palettes, field validations, and automated fraud filters (AFDS), shifting compliance away from self-hosted servers.
 - **Best for:** Established merchants utilizing Authorize.Net gateway services who require a quick, secure checkout page without building custom tokenized payment forms.
@@ -207,7 +211,7 @@ Self-hosted, community-driven payment orchestration platforms, self-hosted check
 
 ## 📈 Star History
 
-[![Star History Chart](https://www.star-history.com/svg?repos=juspay/hyperswitch,medusajs/medusa,getlago/lago,btcpayserver/btcpayserver,killbill/killbill,bitcart/bitcart&type=date&legend=top-left)](https://www.star-history.com/#juspay/hyperswitch&medusajs/medusa&getlago/lago&btcpayserver/btcpayserver&killbill/killbill&bitcart/bitcart&type=date&legend=top-left)
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Secure-Hosted-Payment-Pages-PCI-DSS&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Secure-Hosted-Payment-Pages-PCI-DSS&type=date&legend=top-left)
 
 ---
 

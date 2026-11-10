@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Filter for subtle drop shadows & glows -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Dynamic Animated Background Elements */
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1.5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes floatReverse {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-1.5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.75; }
+    }
+
+    @keyframes dashMove {
+      from { stroke-dashoffset: 200; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    .float-card-1 {
+      animation: floatSlow 7s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .float-card-2 {
+      animation: floatReverse 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .pulse-layer {
+      animation: pulseGlow 5s ease-in-out infinite;
+    }
+
+    .dash-line {
+      stroke-dasharray: 8, 8;
+      animation: dashMove 12s linear infinite;
+    }
+
+    /* Typography */
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .gradient-word {
+      fill: url(#primaryGlow);
+    }
+
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #e2e8f0;
+    }
+  </style>
+
+  <!-- Deep Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Cyber Circuit Lines & Orbs (Dynamic Layer) -->
+  <g class="pulse-layer">
+    <circle cx="150" cy="70" r="140" fill="#38bdf8" filter="url(#glow)" opacity="0.12" />
+    <circle cx="1080" cy="290" r="160" fill="#818cf8" filter="url(#glow)" opacity="0.1" />
+    <circle cx="950" cy="60" r="100" fill="#10b981" filter="url(#glow)" opacity="0.12" />
+  </g>
+
+  <!-- Decorative PCI-DSS Data Flow Line -->
+  <path d="M 80,180 Q 300,60 600,180 T 1120,180" fill="none" stroke="url(#primaryGlow)" stroke-width="1.5" opacity="0.3" class="dash-line" />
+
+  <!-- Background Floating Decorative Elements (Behind foreground text) -->
+  <g class="float-card-1" opacity="0.85">
+    <!-- Mini Credit Card Graphic right side -->
+    <g transform="translate(870, 70)" filter="url(#cardShadow)">
+      <rect width="250" height="150" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+      <rect x="24" y="28" width="40" height="30" rx="6" fill="#f59e0b" opacity="0.9" />
+      <rect x="24" y="85" width="120" height="8" rx="4" fill="#64748b" opacity="0.5" />
+      <rect x="24" y="105" width="80" height="8" rx="4" fill="#475569" opacity="0.5" />
+      <circle cx="210" cy="115" r="16" fill="#ef4444" opacity="0.8" />
+      <circle cx="190" cy="115" r="16" fill="#f59e0b" opacity="0.8" />
+      <!-- Lock Badge -->
+      <g transform="translate(195, 20)">
+        <circle cx="14" cy="14" r="14" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+        <path d="M10,14 L10,12 C10,9.8 11.8,8 14,8 C16.2,8 18,9.8 18,12 L18,14 M9,14 L19,14 C19.6,14 20,14.4 20,15 L20,20 C20,20.6 19.6,21 19,21 L9,21 C8.4,21 8,20.6 8,20 L8,15 C8,14.4 8.4,14 9,14 Z" fill="none" stroke="#10b981" stroke-width="1.2" />
+      </g>
+    </g>
+  </g>
+
+  <g class="float-card-2" opacity="0.9">
+    <!-- Floating Tokenized Vault Pill -->
+    <g transform="translate(930, 245)" filter="url(#cardShadow)">
+      <rect width="210" height="52" rx="26" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <circle cx="30" cy="26" r="14" fill="#10b981" opacity="0.2" />
+      <path d="M 26,26 L 29,29 L 36,22" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="56" y="31" class="pill-text" fill="#34d399">PCI SAQ A Scope</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header, Titles, Description, and Badges (Always Sharp & Unobscured) -->
+  <g transform="translate(80, 0)">
+    <!-- Security Shield Icon -->
+    <g transform="translate(0, 52)">
+      <rect width="48" height="48" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+      <path d="M24,10 L36,15 L36,26 C36,33 24,38 24,38 C24,38 12,33 12,26 L12,15 Z" fill="url(#shieldGrad)" opacity="0.25" />
+      <path d="M24,10 L36,15 L36,26 C36,33 24,38 24,38 C24,38 12,33 12,26 L12,15 Z" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" />
+      <path d="M20,24 L23,27 L29,21" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Top Badge Tag -->
+    <g transform="translate(62, 60)">
+      <rect width="180" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="16" cy="15" r="4" fill="#10b981" />
+      <text x="28" y="20" class="pill-text" fill="#94a3b8">FINTECH ARCHITECTURE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="145" class="title-text">
+      Secure Hosted <tspan class="gradient-word">Payment Pages</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="185" class="title-text" font-size="28" fill="#e2e8f0" font-weight="600">
+      PCI-DSS Compliance &amp; Checkout Solutions
+    </text>
+
+    <!-- Paragraph Subtitle -->
+    <text x="0" y="224" class="subtitle-text">
+      Curated directory of SaaS leaders and self-hosted open-source payment orchestrators
+    </text>
+    <text x="0" y="248" class="subtitle-text">
+      designed to minimize PCI-DSS v4.0 scope via secure iframes, redirects, and tokenization.
+    </text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 280)">
+      <!-- Pill 1 -->
+      <g>
+        <rect width="140" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" class="pill-text" fill="#38bdf8">🔒 Zero Cardholder Scope</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(152, 0)">
+        <rect width="138" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" class="pill-text" fill="#818cf8">⚡ Turnkey Checkouts</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(302, 0)">
+        <rect width="148" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" class="pill-text" fill="#34d399">🌐 Open-Source &amp; SaaS</text>
+      </g>
+    </g>
+  </g>
+</svg>
