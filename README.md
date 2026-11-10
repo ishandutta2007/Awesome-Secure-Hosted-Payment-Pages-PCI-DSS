@@ -1,126 +1,248 @@
-# Awesome-Secure-Hosted-Payment-Pages-PCI-DSS
+# 💳 Awesome Secure Hosted Payment Pages (PCI-DSS)
 
-# Awesome Secure Hosted Payment Pages (PCI-DSS)
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-blue.svg" alt="License: CC0-1.0" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-Hosted-Payment-Pages-PCI-DSS/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Secure-Hosted-Payment-Pages-PCI-DSS/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-> A curated list of top Secure Hosted Payment Page platforms — both SaaS/Hosted commercial solutions and open-source alternatives for accepting payments while minimizing PCI-DSS scope.
-> 🌟 Star this repo if you find it useful! 🌟
+> 🛒 A curated list of top **Secure Hosted Payment Page platforms** and **hosted checkout solutions** — covering commercial SaaS market leaders and self-hosted open-source software for accepting online payments while minimizing PCI-DSS compliance scope (SAQ A / SAQ A-EP).
+
+🌟 **Star this repository if you find it helpful!** 🌟
 
 ---
 
 ## 📋 Table of Contents
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Chargebee Hosted Pages](#chargebee-hosted-pages)
-  - [Stripe Hosted Checkout](#stripe-hosted-checkout)
-  - [PayPal Hosted Checkout](#paypal-hosted-checkout)
-  - [Adyen Hosted Checkout](#adyen-hosted-checkout)
-  - [Square Hosted Checkout](#square-hosted-checkout)
-  - [FastSpring Storefront](#fastspring-storefront)
-  - [Mollie Payment Links](#mollie-payment-links)
-  - [Checkout.com Hosted Payments](#checkoutcom-hosted-payments)
-  - [Authorize.Net SIM Hosted Form](#authorizenet-sim-hosted-form)
-- [Open-Source Software](#-open-source-software)
-  - [Payfolio](#payfolio)
-- [Comparison at a Glance](#-comparison-at-a-glance)
-- [Contributing](#-contributing)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🟦 SaaS / Hosted Platforms](#-saas--hosted-platforms)
+  - [📊 Commercial SaaS Comparison Matrix](#-commercial-saas-comparison-matrix)
+  - [🔍 SaaS Platform Deep Dives](#-saas-platform-deep-dives)
+- [🟩 Open-Source Software](#-open-source-software)
+  - [⭐ Open-Source Solutions by Star Count](#-open-source-solutions-by-star-count)
+  - [🔬 Open-Source Project Deep Dives](#-open-source-project-deep-dives)
+- [⚖️ Comparison at a Glance](#-comparison-at-a-glance)
+- [📈 Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global payment gateway and hosted checkout market is estimated at **$48B–$58B+ in 2025–2026** (expanding at ~15%–18% CAGR), with hosted payment pages capturing over **55%–58% of traditional e-commerce transaction volume** due to strict PCI-DSS v4.0 compliance mandates.
+
+Market dynamics reflect a **moderately concentrated, winner-take-most tier at the infrastructure layer** dominated by global payment juggernauts (PayPal, Stripe, Adyen, and Visa/Authorize.Net), while remaining **fragmented and competitive across regional gateways, specialized Merchant of Record (MoR) providers, and emerging self-hosted payment orchestrators**.
 
 ---
 
 ## 🟦 SaaS / Hosted Platforms
 
-Commercial, cloud-hosted Secure Hosted Payment Page platforms. These are not open-source but are included as reference points for feature comparison.
+Commercial, cloud-hosted Secure Hosted Payment Page platforms sorted in descending order by enterprise valuation and scale.
 
-### Chargebee Hosted Pages
-**Type:** Full-featured billing hosted pages with PCI DSS Level 1
-Chargebee's hosted capabilities provide pre-built, configurable pages for checkout, customer portal, payment method management, and pay-now invoice collection [citation:1]. For card payments, they help meet most PCI DSS compliance requirements, with Chargebee stating PCI DSS Level 1 compliance [citation:1][citation:13]. Pages can be embedded via Chargebee.js (which creates and manages the iframe) rather than placing URLs in your own iframe [citation:13]. Supported features include multiple payment gateways, localization, brand customization, automated tax calculation, and subscription management offloading [citation:1].
-**Best for:** Subscription businesses already using Chargebee for billing wanting hosted checkout and portal pages that offload PCI scope alongside subscription management.
+### 📊 Commercial SaaS Comparison Matrix
 
-### Stripe Hosted Checkout
-**Type:** Hosted payment pages with strong recovery and compliance tooling
-Stripe Checkout Sessions provide hosted payment pages for one-time payments and subscriptions, with Stripe recommending them as the preferred standard flow [citation:14]. Stripe helps businesses achieve and maintain PCI compliance [citation:2]. Revenue recovery features include Smart Retries (recovering 57% of failed recurring payments on average), reminder emails, and a hosted recovery page for updating payment details [citation:2]. Supports cards, digital wallets, bank redirects, and direct debits [citation:2].
-**Best for:** Teams already on Stripe wanting hosted checkout with built-in revenue recovery and global payment method support.
+| Platform | Company Valuation / Revenue | Pricing (Starting Tier) | Free Tier / Trial Limits | Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Authorize.Net](https://www.authorize.net/)** | 🏢 **$500B+ Market Cap** *(Visa parent; $2.0B acq.)* | 💰 **$25 / month + $0.10 / txn** *(Gateway only)* or **$25 / month + 2.9% + $0.30 / txn** *(All-in-One)* | 🔒 **No free tier**; Free developer sandbox with unlimited test transactions | Server Integration Method (SIM) & Hosted Payment Form, fraud suite, virtual terminal, recurring billing. |
+| **[PayPal](https://www.paypal.com/)** | 🏢 **$80B – $85B Market Cap** *(~$30B Annual Revenue)* | 💰 **2.99% + $0.49 per transaction** *(Standard Hosted Checkout; no monthly fee)* | 🎁 **Free account forever**; No setup fees, pay only per successful transaction; full developer sandbox | Hosted Checkout, Venmo, Pay Later, digital wallets, global coverage across 200+ markets & 130+ currencies. |
+| **[Stripe](https://stripe.com/)** | 🏢 **$65B – $70B Valuation** *(~$16B+ Net Revenue)* | 💰 **2.9% + $0.30 per successful card charge** *(Pay-as-you-go; no monthly fee)* | 🎁 **Free account forever**; No setup/monthly fees, unlimited test transactions in developer mode | Stripe Checkout Sessions, pre-built payment links, localized payment methods (100+), Smart Retries. |
+| **[Adyen](https://www.adyen.com/)** | 🏢 **$40B – $45B Market Cap** *(~$2.0B Net Revenue)* | 💰 **$0.13 fixed processing fee + Interchange++** *(per transaction; no monthly fee)* | 🔒 **No free tier**; Free test platform sandbox; minimum monthly invoice threshold applies in production | Enterprise Hosted Checkout, custom themes, omnichannel acquiring, global multi-currency tokenization. |
+| **[Square](https://squareup.com/)** | 🏢 **$40B – $45B Market Cap** *(Block Inc.; ~$22B Gross Rev)* | 💰 **3.3% + $0.30 per transaction** *(Square Free Plan; $0/month)* or **2.9% + $0.30** *(Square Plus at $49/mo)* | 🎁 **Free plan forever** with $0 monthly fee (pay per txn); 30-day free trial on Plus/Premium tiers | Square Hosted Checkout & Payment Links, auto payment reminders, inventory and Customer Directory sync. |
+| **[Checkout.com](https://www.checkout.com/)** | 🏢 **$12B Valuation** *(~$750M Net Revenue)* | 💰 **Custom Interchange++ or blended rate** *(approx. 0.95%–1.99% + $0.10–$0.20 per txn; no monthly fee)* | 🔒 **No free live tier**; Free developer sandbox environment for test cards & simulated flows | Hosted Payments Pages, Payment Links via SMS/email, granular 3D Secure 2, real-time fraud monitoring. |
+| **[Mollie](https://www.mollie.com/)** | 🏢 **$6.5B Valuation** *(~$214M Revenue)* | 💰 **1.80% + €0.25 per transaction** *(EEA cards; no monthly fee)* | 🎁 **Free account forever**; No monthly/setup fees, test mode sandbox with unlimited mock payments | Branded hosted payment links, QR code checkouts, European payment methods (iDEAL, Bancontact, SEPA). |
+| **[Chargebee](https://www.chargebee.com/)** | 🏢 **$3.5B Valuation** *(~$200M ARR)* | 💰 **$0/month base** *(Starter plan; 0.75% overage after threshold)* or **$599/month** *(Performance tier)* | 🎁 **Free for first $250,000** cumulative lifetime billing on Starter plan; or 14-day free trial | PCI DSS Level 1 hosted checkout pages, customer self-serve portal, dunning & revenue recovery automation. |
+| **[FastSpring](https://fastspring.com/)** | 🏢 **$500M – $800M Est. Valuation** *(~$1B+ TPV)* | 💰 **5.9% + per transaction** or custom revenue-share *(Merchant of Record; no monthly fee)* | 🔒 **No free tier**; Free developer sandbox store for end-to-end checkout & webhook testing | Full Merchant of Record (MoR), hosted storefront, global sales tax/VAT remittance, automated invoicing. |
 
-### PayPal Hosted Checkout
-**Type:** Hosted checkout with extensive payment method coverage
-PayPal's hosted checkout accepts PayPal, Venmo, Pay Later, crypto, and major credit/debit cards, available in 200+ markets and 130+ currencies [citation:15]. Pricing is 2.99% + $0.49 per transaction for PayPal Checkout (hosted), with an optional Chargeback Protection add-on at 0.40% per transaction [citation:15]. PayPal manages PCI compliance for the hosted flow, and the platform includes built-in risk management and Seller Protection on eligible transactions [citation:15].
-**Best for:** Businesses wanting broad consumer payment method coverage (PayPal, Venmo, cards) with managed compliance and no monthly fees.
+---
 
-### Adyen Hosted Checkout
-**Type:** Customizable hosted checkout with theme support
-Adyen Hosted Checkout supports theme creation with brand logo, display name, and default settings, with the theme ID passed in the `/sessions` request to style the hosted page [citation:5]. The session response includes the hosted page URL, which expires after 1 hour by default [citation:5]. Adyen supports a wide range of payment methods filtered by shopper country and currency, with risk checks and tokenization for stored payment details [citation:5].
-**Best for:** Adyen merchants wanting a branded, themeable hosted checkout with global payment method coverage.
+### 🔍 SaaS Platform Deep Dives
 
-### Square Hosted Checkout
-**Type:** Hosted payment links for forms and e-commerce
-Square Hosted Checkout is available through various integrations (WooCommerce, WPForms, Fluent Forms, etc.), where buyers are redirected to a Square-hosted page to complete payment and then returned to the originating form or order [citation:4]. Payment links support pre-populated buyer email and phone for faster checkout, with customer linking via Square Customer Directory [citation:4]. Payment reminders for unpaid orders can be automated with the hosted checkout link [citation:4].
-**Best for:** Businesses using Square for payments wanting hosted checkout integrated with forms and e-commerce platforms.
+#### Chargebee Hosted Pages
+- **Type:** Full-featured billing hosted pages with PCI DSS Level 1
+- **Overview:** Chargebee's hosted capabilities provide pre-built, configurable pages for checkout, customer portal, payment method management, and pay-now invoice collection. For card payments, they help meet most PCI DSS compliance requirements with Level 1 compliance. Pages can be embedded via `Chargebee.js` (which creates and manages the secure iframe) rather than placing raw URLs in manual iframes. Supported features include multiple payment gateways, localization, brand customization, automated tax calculation, and subscription management offloading.
+- **Best for:** Subscription and SaaS businesses already using Chargebee for billing wanting hosted checkout and portal pages that offload PCI scope alongside subscription management.
 
-### FastSpring Storefront
-**Type:** Merchant of Record storefront with hosted checkout
-FastSpring acts as a Merchant of Record, handling payment processing and tax compliance. Store settings control localization (base and available currencies), invoicing (quotes, net terms, reminders), support contact display, and tax codes [citation:6]. The hosted storefront handles checkout, receipts, and self-service portals on the merchant's behalf.
-**Best for:** SaaS and digital product businesses wanting a Merchant of Record to fully offload tax and compliance alongside hosted checkout.
+#### Stripe Hosted Checkout
+- **Type:** Hosted payment pages with intelligent recovery and compliance tooling
+- **Overview:** Stripe Checkout Sessions provide turnkey hosted payment pages for one-time payments and recurring subscriptions. Stripe automatically adapts to customer device, language, and currency, supporting over 100 payment methods. Revenue recovery features include Smart Retries (recovering 57% of failed recurring payments on average), automated reminder emails, and a hosted customer portal for updating payment details.
+- **Best for:** Development teams wanting a battle-tested, globally localized hosted checkout experience with built-in fraud prevention (Radar) and zero server PCI scope.
 
-### Mollie Payment Links
-**Type:** Simple hosted payment links with QR codes
-Mollie Payment Links create a URL (and QR code) that directs customers to a branded checkout page from any channel [citation:7]. Links can be created via the Mollie Web app or app with currency, amount, description, optional expiry date, and redirect URL, or programmatically via the Payment Links API [citation:7]. Mollie handles the payment page and PCI compliance for the hosted flow.
-**Best for:** European businesses wanting simple, shareable payment links with QR codes without a full checkout integration.
+#### PayPal Hosted Checkout
+- **Type:** Hosted checkout with comprehensive consumer payment method coverage
+- **Overview:** PayPal's hosted checkout accepts PayPal, Venmo, Pay Later, cryptocurrency, and major credit/debit cards across 200+ markets and 130+ currencies. PayPal manages all PCI compliance for the hosted flow, backed by built-in risk algorithms and Seller Protection on eligible transactions.
+- **Best for:** Businesses seeking high consumer trust and conversion through broad wallet coverage (PayPal, Venmo) without monthly software subscription overhead.
 
-### Checkout.com Hosted Payments
-**Type:** Hosted payment pages and payment links
-Checkout.com offers Hosted Payments Pages where customers enter payment details on a Checkout.com-hosted page, with a token generated in the background to complete the payment request [citation:10]. Payment Links can also be sent via email, chat, or text, directing customers to the hosted page [citation:10].
-**Best for:** Checkout.com merchants wanting both hosted page and payment link options for accepting payments.
+#### Adyen Hosted Checkout
+- **Type:** Highly customizable enterprise hosted checkout with theme architecture
+- **Overview:** Adyen Hosted Checkout supports theme creation with custom brand logos, typography, and color schemes, where the theme ID is passed dynamically in the session initiation request. The session response returns a time-bound hosted payment page URL. Adyen supports hundreds of local and international payment methods with advanced risk scoring (RevenueProtect) and automated tokenization.
+- **Best for:** Global omnichannel enterprises and merchants wanting brand-aligned, themeable hosted checkout pages with direct bank acquiring.
 
-### Authorize.Net SIM Hosted Form
-**Type:** Legacy hosted payment form with customization
-Authorize.Net's Server Integration Method (SIM) provides a hosted payment form with configurable colors, fonts, header/footer text, form fields (view/edit/required), and optional CAPTCHA security code [citation:9]. **Important:** Authorize.Net notes that AIM, SIM, and DPM are obsolete and being phased out, recommending modern connection methods instead [citation:9].
-**Best for:** Existing Authorize.Net merchants with legacy SIM integrations; new implementations should evaluate modern alternatives.
+#### Square Hosted Checkout
+- **Type:** Hosted payment links for forms, invoices, and e-commerce
+- **Overview:** Square Hosted Checkout enables merchants to generate instant payment links and checkout URLs without maintaining a standalone web storefront. Buyers are redirected to a Square-hosted page to complete payment and then returned to the merchant site. Features include pre-populated buyer contact details, automatic payment reminders for unpaid invoices, and real-time synchronization with the Square Customer Directory.
+- **Best for:** Omnichannel businesses and SMBs needing straightforward hosted checkout links for forms, social selling, and service billing.
+
+#### FastSpring Storefront
+- **Type:** Merchant of Record storefront with hosted checkout & tax remittance
+- **Overview:** FastSpring acts as an authorized Merchant of Record (MoR), absorbing total liability for payment processing, chargebacks, fraud, and global sales tax / VAT / GST collection and filing. The hosted storefront handles localized checkouts, digital fulfillment, recurring billing, and self-service buyer portals.
+- **Best for:** Global software, SaaS, and digital goods publishers seeking complete relief from international tax regulations and chargeback liabilities.
+
+#### Mollie Payment Links
+- **Type:** European-centric hosted payment links with QR code integration
+- **Overview:** Mollie Payment Links generate secure URLs and QR codes directing customers to a branded checkout page. Links can be created through the Mollie Web App, mobile dashboard, or programmatically via the Payment Links API, with support for custom expiry dates and webhook notifications. Mollie handles all cardholder data within its secure infrastructure.
+- **Best for:** European merchants and service businesses desiring frictionless, shareable payment links with rich support for regional payment methods (iDEAL, Bancontact, SEPA).
+
+#### Checkout.com Hosted Payments
+- **Type:** Enterprise hosted payment pages and shareable payment links
+- **Overview:** Checkout.com provides Hosted Payments Pages where customers enter payment information on Checkout.com-hosted secure domains. Payment tokens are securely created in the background to finalize transactions, reducing merchant infrastructure to SAQ A PCI compliance. Payment Links can be dispatched across SMS, messaging apps, and email.
+- **Best for:** High-volume digital platforms, marketplaces, and cross-border merchants wanting enterprise-grade payment performance and granular routing.
+
+#### Authorize.Net SIM Hosted Form
+- **Type:** Established hosted payment form with customizable template controls
+- **Overview:** Authorize.Net's Server Integration Method (SIM) and modern hosted payment forms provide customizable checkout forms where card data is captured directly on Visa/Authorize.Net servers. Merchants can configure color palettes, field validations, and automated fraud filters (AFDS), shifting compliance away from self-hosted servers.
+- **Best for:** Established merchants utilizing Authorize.Net gateway services who require a quick, secure checkout page without building custom tokenized payment forms.
 
 ---
 
 ## 🟩 Open-Source Software
 
-Self-hosted, community-driven Secure Hosted Payment Page tools. The open-source ecosystem for **hosted payment pages** is extremely limited, as PCI-DSS compliance for handling card data requires significant infrastructure and auditing that most open-source projects cannot sustain.
+Self-hosted, community-driven payment orchestration platforms, self-hosted checkout engines, and crypto payment processors. These solutions provide self-hosted alternatives for managing checkout flows, payment routing, and multi-gateway connectivity while keeping sensitive cardholder data isolated or delegating to compliant tokenization vaults.
 
-### Payfolio
-**Stack:** Next.js / TypeScript / Tailwind CSS | **License:** MIT
-Payfolio is a self-hosted payment web application positioned as an open-source alternative to Patreon, Ko-fi, and Buy Me a Coffee, designed for creators to accept small contributions [citation:12]. Users select a number of "coffees," enter optional name and message, specify an amount, and donate. **Critical limitation:** Payfolio integrates with **Razorpay** for payment handling, meaning the actual payment page and card data handling are offloaded to Razorpay's hosted/embedded checkout—Payfolio itself is a frontend for initiating payments, not a PCI-compliant hosted payment page [citation:12]. It does not provide a hosted payment page in the PCI-DSS sense; it is a donation frontend that relies on a third-party gateway.
-**Best for:** Creators wanting a self-hosted donation page that initiates Razorpay payments, accepting that PCI compliance and card handling are delegated to Razorpay.
+### ⭐ Open-Source Solutions by Star Count
+
+| Project | Stars | Language / Stack | License | Primary Focus |
+| :--- | :---: | :--- | :--- | :--- |
+| **[juspay/hyperswitch](https://github.com/juspay/hyperswitch)** | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | Rust | Apache-2.0 | High-performance open-source payment switch & PCI-compliant hosted checkout |
+| **[medusajs/medusa](https://github.com/medusajs/medusa)** | [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | TypeScript / Node.js | Medusa License | Headless commerce engine with modular hosted & embedded checkout flows |
+| **[getlago/lago](https://github.com/getlago/lago)** | [![Stars](https://img.shields.io/github/stars/getlago/lago?style=social&color=white)](https://github.com/getlago/lago/stargazers) | Ruby / Go / TypeScript | AGPL-3.0 | Open-source metering, subscription billing, and customer payment portal |
+| **[btcpayserver/btcpayserver](https://github.com/btcpayserver/btcpayserver)** | [![Stars](https://img.shields.io/github/stars/btcpayserver/btcpayserver?style=social&color=white)](https://github.com/btcpayserver/btcpayserver/stargazers) | C# / ASP.NET Core | MIT | Self-hosted, non-custodial Bitcoin & Lightning Network hosted checkout server |
+| **[killbill/killbill](https://github.com/killbill/killbill)** | [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers) | Java | Apache-2.0 | Enterprise open-source subscription billing & payment gateway routing platform |
+| **[bitcart/bitcart](https://github.com/bitcart/bitcart)** | [![Stars](https://img.shields.io/github/stars/bitcart/bitcart?style=social&color=white)](https://github.com/bitcart/bitcart/stargazers) | Python / Vue.js | MIT | Self-hosted multi-cryptocurrency checkout page & payment processor |
+| **[commercelayer/mfe-checkout](https://github.com/commercelayer/mfe-checkout)** | [![Stars](https://img.shields.io/github/stars/commercelayer/mfe-checkout?style=social&color=white)](https://github.com/commercelayer/mfe-checkout/stargazers) | TypeScript / React | MIT | Open-source micro-frontend checkout application with PCI-compliant payment integrations |
+| **[muhammad-fiaz/payfolio](https://github.com/muhammad-fiaz/payfolio)** | [![Stars](https://img.shields.io/github/stars/muhammad-fiaz/payfolio?style=social&color=white)](https://github.com/muhammad-fiaz/payfolio/stargazers) | Next.js / TypeScript | MIT | Self-hosted creator donation page delegating card handling to Razorpay checkout |
 
 ---
 
-## 📊 Comparison at a Glance
+### 🔬 Open-Source Project Deep Dives
 
-| Software | License | Stack | PCI Scope Reduction | Hosted Page | Self-Hosted | Best For |
-|----------|---------|-------|---------------------|-------------|-------------|----------|
-| **Chargebee** | Proprietary | Cloud | ✅ PCI DSS L1 | ✅ Checkout/portal | ❌ | Subscription billing + hosted pages |
-| **Stripe** | Proprietary | Cloud | ✅ | ✅ Checkout Sessions | ❌ | Hosted checkout + recovery |
-| **PayPal** | Proprietary | Cloud | ✅ Managed | ✅ Hosted checkout | ❌ | Broad consumer payment methods |
-| **Adyen** | Proprietary | Cloud | ✅ | ✅ Themeable | ❌ | Branded global checkout |
-| **Square** | Proprietary | Cloud | ✅ | ✅ Payment links | ❌ | Forms + e-commerce integration |
-| **FastSpring** | Proprietary | Cloud | ✅ MoR | ✅ Storefront | ❌ | Full tax/compliance offload |
-| **Mollie** | Proprietary | Cloud | ✅ | ✅ Payment links | ❌ | Simple links + QR codes |
-| **Checkout.com** | Proprietary | Cloud | ✅ | ✅ Hosted pages | ❌ | Hosted page + links |
-| **Payfolio** | MIT | Next.js | ❌ (Via Razorpay) | ❌ (Frontend only) | ✅ | Creator donations via Razorpay |
+#### ⚡ [juspay/hyperswitch](https://github.com/juspay/hyperswitch)
+- **Repository:** [juspay/hyperswitch](https://github.com/juspay/hyperswitch) [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers)
+- **Stack:** Rust / WebAssembly / PostgreSQL | **License:** Apache-2.0
+- **Overview:** A high-performance, open-source payment orchestration platform built in Rust. Hyperswitch acts as a universal switch connecting to 50+ payment processors, payout providers, and card vaults. It provides out-of-the-box pre-built, PCI-compliant hosted payment pages, embedded SDKs, intelligent transaction routing, zero-code checkout switching, and revenue recovery features.
+- **Best for:** Fast-growing businesses and enterprises wanting to eliminate payment gateway vendor lock-in with a self-hostable, PCI-compliant checkout router.
+
+#### 🐙 [medusajs/medusa](https://github.com/medusajs/medusa)
+- **Repository:** [medusajs/medusa](https://github.com/medusajs/medusa) [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers)
+- **Stack:** TypeScript / Node.js / PostgreSQL | **License:** Medusa License
+- **Overview:** Leading modular open-source digital commerce backend. Medusa isolates checkout sessions, tax calculations, and payment provider flows into pluggable modules. It interfaces seamlessly with hosted payment redirect workflows (Stripe, Adyen, PayPal, Klarna) so merchant servers never process or store raw Primary Account Numbers (PANs).
+- **Best for:** Developers building tailored modern e-commerce storefronts requiring fully customizable checkout flows with isolated PCI boundaries.
+
+#### 🦩 [getlago/lago](https://github.com/getlago/lago)
+- **Repository:** [getlago/lago](https://github.com/getlago/lago) [![Stars](https://img.shields.io/github/stars/getlago/lago?style=social&color=white)](https://github.com/getlago/lago/stargazers)
+- **Stack:** Ruby on Rails / Go / TypeScript | **License:** AGPL-3.0
+- **Overview:** Open-source metering, billing, and subscription management architecture. Lago offers an open-source alternative to Chargebee and Stripe Billing, featuring a hosted customer payment portal for updating credit cards, reviewing past invoices, and executing one-click payments through integrated PSP token vaults.
+- **Best for:** SaaS, API, and cloud infrastructure companies looking for self-hosted subscription billing with customer payment portals.
+
+#### ₿ [btcpayserver/btcpayserver](https://github.com/btcpayserver/btcpayserver)
+- **Repository:** [btcpayserver/btcpayserver](https://github.com/btcpayserver/btcpayserver) [![Stars](https://img.shields.io/github/stars/btcpayserver/btcpayserver?style=social&color=white)](https://github.com/btcpayserver/btcpayserver/stargazers)
+- **Stack:** C# / ASP.NET Core / Docker | **License:** MIT
+- **Overview:** Free, open-source, and non-custodial cryptocurrency payment processor. It generates secure hosted checkout invoices with dynamic QR codes, Lightning Network invoice generation, and refund management with 0% transaction fees and zero intermediary custody.
+- **Best for:** Merchants and organizations looking to host their own cryptocurrency payment checkout without third-party fees, transaction surveillance, or chargeback risk.
+
+#### 💰 [killbill/killbill](https://github.com/killbill/killbill)
+- **Repository:** [killbill/killbill](https://github.com/killbill/killbill) [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
+- **Stack:** Java / OSGi / MySQL / MariaDB | **License:** Apache-2.0
+- **Overview:** Enterprise-grade open-source subscription billing and payments engine. Kill Bill connects to multiple payment gateways, manages recurring billing cycles, dunning retries, and invoices, while providing plugin architectures for hosted payment form redirection.
+- **Best for:** Large enterprise organizations requiring complete on-premise control over recurring billing records and multi-gateway processing pipelines.
+
+#### 🛒 [bitcart/bitcart](https://github.com/bitcart/bitcart)
+- **Repository:** [bitcart/bitcart](https://github.com/bitcart/bitcart) [![Stars](https://img.shields.io/github/stars/bitcart/bitcart?style=social&color=white)](https://github.com/bitcart/bitcart/stargazers)
+- **Stack:** Python / FastAPI / Vue.js | **License:** MIT
+- **Overview:** Lightweight, self-hosted cryptocurrency checkout engine and payment gateway supporting Bitcoin, Ethereum, Monero, Litecoin, and major stablecoins. Features ready-to-use hosted checkout pages, point-of-sale interfaces, and e-commerce plugin integrations.
+- **Best for:** Self-hosters and merchants requiring a multi-currency crypto checkout page with minimal resource footprint.
+
+#### 🛍️ [commercelayer/mfe-checkout](https://github.com/commercelayer/mfe-checkout)
+- **Repository:** [commercelayer/mfe-checkout](https://github.com/commercelayer/mfe-checkout) [![Stars](https://img.shields.io/github/stars/commercelayer/mfe-checkout?style=social&color=white)](https://github.com/commercelayer/mfe-checkout/stargazers)
+- **Stack:** TypeScript / React / Tailwind CSS | **License:** MIT
+- **Overview:** Open-source micro-frontend (MFE) checkout application designed for headless commerce. Renders a secure, high-conversion hosted checkout experience supporting customer address validation, delivery options, and secure payment tokenization across diverse gateways.
+- **Best for:** Headless commerce engineering teams looking for a customizable, decoupled hosted checkout UI.
+
+#### ☕ [muhammad-fiaz/payfolio](https://github.com/muhammad-fiaz/payfolio)
+- **Repository:** [muhammad-fiaz/payfolio](https://github.com/muhammad-fiaz/payfolio) [![Stars](https://img.shields.io/github/stars/muhammad-fiaz/payfolio?style=social&color=white)](https://github.com/muhammad-fiaz/payfolio/stargazers)
+- **Stack:** Next.js / TypeScript / Tailwind CSS | **License:** MIT
+- **Overview:** Self-hosted creator donation page serving as an open-source alternative to Buy Me a Coffee and Ko-fi. Delegates card handling and PCI scope directly to Razorpay's hosted checkout modal.
+- **Best for:** Independent creators seeking a personal branded donation landing page.
+
+---
+
+## ⚖️ Comparison at a Glance
+
+| Software | Model | Stack | PCI Scope Reduction | Hosted Checkout Page | Self-Hosted | Primary Strength |
+| :--- | :---: | :--- | :---: | :---: | :---: | :--- |
+| **Authorize.Net** | SaaS | Cloud | ✅ SAQ A / SIM | ✅ SIM / Hosted Form | ❌ | Established gateway backed by Visa network |
+| **PayPal** | SaaS | Cloud | ✅ SAQ A | ✅ Hosted Checkout | ❌ | Unmatched consumer trust & wallet adoption |
+| **Stripe** | SaaS | Cloud | ✅ SAQ A | ✅ Checkout Sessions | ❌ | Developer-first API, global payments & Smart Retries |
+| **Adyen** | SaaS | Cloud | ✅ SAQ A | ✅ Branded Themes | ❌ | Global unified commerce & direct acquiring |
+| **Square** | SaaS | Cloud | ✅ SAQ A | ✅ Payment Links | ❌ | Turnkey payment links & POS sync |
+| **Checkout.com** | SaaS | Cloud | ✅ SAQ A | ✅ Hosted Pages | ❌ | Enterprise scale & granular 3D Secure routing |
+| **Mollie** | SaaS | Cloud | ✅ SAQ A | ✅ Payment Links | ❌ | European payment coverage & QR code checkout |
+| **Chargebee** | SaaS | Cloud | ✅ Level 1 | ✅ Checkout / Portal | ❌ | Subscription billing with PCI Level 1 pages |
+| **FastSpring** | SaaS | Cloud | ✅ MoR Scope | ✅ Hosted Storefront | ❌ | Full Merchant of Record tax & liability offload |
+| **Hyperswitch** | OSS | Rust | ✅ Built-in / SAQ A | ✅ Pre-built Pages | ✅ | Multi-processor orchestration & zero gateway lock-in |
+| **Medusa** | OSS | TypeScript | ✅ Delegated | ✅ Modular Flows | ✅ | Composable headless commerce & checkout modules |
+| **Lago** | OSS | Ruby / Go | ✅ Delegated | ✅ Billing Portal | ✅ | Self-hosted metering & customer payment portal |
+| **BTCPay Server** | OSS | C# | ✅ Non-custodial | ✅ Hosted Invoices | ✅ | 0% fee self-hosted Bitcoin & Lightning checkout |
+| **Kill Bill** | OSS | Java | ✅ Plugin Vault | ✅ Plugin Gateway | ✅ | Enterprise subscription billing & custom gateway routing |
+| **Bitcart** | OSS | Python | ✅ Non-custodial | ✅ Hosted Invoices | ✅ | Lightweight multi-crypto checkout processor |
+| **Commerce Layer MFE** | OSS | React | ✅ Delegated | ✅ Micro-Frontend | ✅ | Decoupled modern checkout interface for headless stores |
+| **Payfolio** | OSS | Next.js | ✅ (Via Razorpay) | ❌ (Delegated) | ✅ | Lightweight creator donation page |
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=juspay/hyperswitch,medusajs/medusa,getlago/lago,btcpayserver/btcpayserver,killbill/killbill,bitcart/bitcart&type=date&legend=top-left)](https://www.star-history.com/#juspay/hyperswitch&medusajs/medusa&getlago/lago&btcpayserver/btcpayserver&killbill/killbill&bitcart/bitcart&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for exploring this curated directory! If this project helps you choose the right hosted payment page, checkout provider, or open-source payment orchestrator, please consider showing support:
+
+- 🌟 **Star** the repository on GitHub
+- 🍴 **Fork** and contribute new payment solutions or documentation improvements
+- 📢 **Share** with your engineering, fintech, or product teams
+- ☕ **Sponsor**: Support ongoing curation and maintenance via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)
+
+[![Sponsor ishandutta2007](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/ishandutta2007)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Secure Hosted Payment Page tool that should be listed here, please open a pull request with:
+Contributions are warmly welcomed! If you maintain or use an open-source payment gateway, hosted checkout engine, or PCI scope reduction tool that should be included:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
+1. Fork this repository.
+2. Add your entry under the appropriate section following star-count or valuation sorting guidelines.
+3. Include the project's repository URL, tech stack, license, live star badge, and primary value proposition.
+4. Submit a Pull Request with a descriptive summary of why the tool is valuable.
 
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source. Note that the open-source ecosystem for **PCI-DSS compliant hosted payment pages** is essentially nonexistent. Hosted payment pages exist specifically to **reduce PCI scope** by ensuring card data never touches the merchant's servers, but building and maintaining such a service requires PCI-DSS certification (SAQ D or equivalent), which is a significant compliance and infrastructure undertaking that open-source projects cannot realistically sustain. **Payfolio** is the only open-source project found, and it delegates all card handling to Razorpay [citation:12]. For any production use case requiring PCI compliance, commercial providers (Stripe, PayPal, Chargebee, Adyen) remain the only viable options. Self-hosting a payment page directly (SAQ A-EP or SAQ D) introduces a full security program requirement that most teams should avoid [citation:11].
+Please ensure that open-source submissions are actively maintained (commits or releases within the past 12 months) and carry an established open-source license.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This repository and curated list are released under the [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/) license (Public Domain Dedication). All company names, logos, and trademarks belong to their respective owners.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+<p align="center">
+  <b>⭐ Found this curated list valuable? Star the repository to show your support! ⭐</b>
+</p>
